@@ -11,7 +11,7 @@ int main() {
 
     for(int i = 0; i < N; i++) {
         for(int j = i; j < N; j++) {
-            if(C[i] != C[j]){
+            if(C[i] != C[j]) {
                 cont = 0;
                 break;
             }
