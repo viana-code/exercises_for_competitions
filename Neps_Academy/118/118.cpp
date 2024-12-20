@@ -17,8 +17,10 @@ int main(){
     inverseRisada.resize(risada.length());
     reverse_copy(risada.begin(), risada.end(), inverseRisada.begin());
 
-    if(risada == inverseRisada) cout << 'S' << endl;
-    else cout << 'N' << endl;
+    // if(risada == inverseRisada) cout << 'S' << endl;
+    // else cout << 'N' << endl;
+
+    printf("%c\n", (risada == inverseRisada) ? 'S' : 'N');
 
     return 0;
 }
