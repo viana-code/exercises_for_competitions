@@ -1,3 +1,5 @@
 .vscode
 Tests
 236
+*.out
+*.exe
