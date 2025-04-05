@@ -2,19 +2,15 @@
 
 using namespace std;
 
-int main() {
-    int X;
-    cin >> X;
+typedef long long int ll;
+#define faster ios::sync_with_stdio(0); cin.tie(0);
 
-    /* FOR */
-    // for(int i = 1 ; i <= 10; i++) {
-    //     cout << X + i << ' ';
-    // }
+int32_t main() { faster
+    ll a, b, c;
 
-    /* WHILE */
-    int i = 1;
-    while(i <= 10) {
-        cout << X + i << ' ';
-        i++;
+    while(cin >> a >> b >> c) {
+        cout << (a+b+c) << endl;
     }
+    
+    return 0;
 }
