@@ -1,31 +1,27 @@
 #include <bits/stdc++.h>
-
-// NAO RESOLVIDO
-
 using namespace std;
 
+#define ll long long int
+
 int main() {
-    long int N, M, count = 0;
+    ll N, M;
+    vector <int> D(61, 0), E(61,0);
     char L;
-    multiset <int> E, D;
 
     cin >> N;
+    
 
-    for(long int i = 0; i < N; i++) {
-        cin >> M >> L;
-
-        if(L == 'D') D.insert(M);
-        else E.insert(M);
+    for(int i = 0; i < N; i++) {
+        cin >> M >> L;   
+        if(L == 'E') E[M]++;
+        else D[M]++;
     }
 
-    for(auto i : D) {
-        auto it = E.find(i);
-        if(it != E.end()) {
-            count++;
-            E.erase(i);
-        }
-        
+    int total = 0;
+
+    for(int i = 30; i <= 60; i++) {
+        total += min(E[i], D[i]);
     }
 
-    cout << count << endl;
+    cout << total << endl;
 }
